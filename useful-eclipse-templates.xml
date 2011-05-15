@@ -1,4 +1,4 @@
-<templates><template autoinsert="true" context="java" deleted="false" description="init method for junit 4" enabled="true" name="b4">${before:import('org.junit.Before')}${initMocks:importStatic('org.mockito.MockitoAnnotations.*')} 
+<templates><template autoinsert="true" context="java" deleted="false" description="init method for junit 4" enabled="true" name="bb">${before:import('org.junit.Before')}${initMocks:importStatic('org.mockito.MockitoAnnotations.*')} 
 @${:newType(org.junit.Before)}
 public void initBeforeTest() throws Exception {
 	initMocks(this);
@@ -11,4 +11,5 @@ public void should_throw_${testname}_when() throws Exception {
 @${:newType(org.junit.Test)}
 public void should_${testname}() throws Exception {
 	${cursor}
-}</template></templates>
+}</template>
+<template autoinsert="true" context="java" deleted="false" description="Import log4j and create Logger" enabled="true" name="lg">${:import(org.apache.log4j.Logger)}private static final Logger log = Logger.getLogger(${enclosing_type}.class);</template></templates>
